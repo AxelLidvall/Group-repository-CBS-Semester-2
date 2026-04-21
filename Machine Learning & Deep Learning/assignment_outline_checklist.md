@@ -21,9 +21,9 @@
 ## 4. Methodology
 
 ### 4.1 Dataset Description
-- [ ] Describe the FASDD_RS dataset (source, size, image format)
+- [ ] Describe the FASDD_RS dataset (source, size, image format, rgb(?))
 - [ ] Report class distribution: smoke (1,335) vs. neitherFireNorSmoke (888)
-- [ ] Report train/val/test split (1,112 / 741 / 370)
+- [ ] Report train/val/test split (1,112 / 741 / 370) (with percentages)
 - [ ] Include sample images from each class
 - [ ] Discuss class imbalance and whether any action will be taken
 
