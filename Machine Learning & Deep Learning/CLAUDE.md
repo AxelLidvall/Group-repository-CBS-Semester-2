@@ -31,7 +31,7 @@ We follow `checklist.md` step by step, one item at a time. The user will ask que
 jupyter notebook main_project_v2.ipynb
 ```
 
-Dependencies: `numpy pandas matplotlib scikit-learn Pillow datasets tifffile torch torchvision`
+Dependencies: `numpy pandas matplotlib scikit-learn Pillow datasets tifffile tensorflow`
 
 ## Dataset
 
