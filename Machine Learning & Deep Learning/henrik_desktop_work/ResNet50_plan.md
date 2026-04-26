@@ -94,7 +94,7 @@ Output: [cloud, dust, haze, land, seaside, smoke]
 | Learning rate | `1e-3` | Standard starting LR for Adam on a fresh head; high enough to learn quickly, low enough not to overshoot |
 | Loss | `sparse_categorical_crossentropy` | Labels are integers (0–5), not one-hot vectors |
 | Batch size | 32 | Fits comfortably in GPU memory for 224×224 images; gives stable gradient estimates |
-| Epochs | 15 (max) | Head converges quickly; EarlyStopping will cut this short if validation loss plateaus |
+| Epochs | 150 (max) | Increased from 15 — original cap was conservative; GPU runs both phases in ~5 min so headroom exists. EarlyStopping will cut short if val loss plateaus |
 | EarlyStopping patience | 5 | Stop if val loss hasn't improved for 5 consecutive epochs |
 
 ### Phase 2 — Fine-tuning (partial unfreeze)
@@ -104,7 +104,7 @@ Output: [cloud, dust, haze, land, seaside, smoke]
 | Unfrozen layers | Last ~30 layers (Stage 5 + end of Stage 4) | Early layers learn universal features (edges, colours) that transfer well; later layers learn task-specific patterns worth adapting to satellite imagery |
 | Optimizer | Adam | Same optimizer, but re-instantiated so momentum doesn't carry over from Phase 1 |
 | Learning rate | `1e-5` | 100× smaller than Phase 1 — must be tiny to nudge pretrained weights without catastrophic forgetting |
-| Epochs | 15 (max) | Fine-tuning needs more time but also more caution; EarlyStopping guards against overfitting |
+| Epochs | 150 (max) | Increased from 15 — paper trains up to 200 epochs; our GPU finishes both phases in ~5 min so runtime is not a constraint |
 | EarlyStopping patience | 5 | Same as Phase 1 |
 | ReduceLROnPlateau | factor=0.5, patience=3 | Halves LR if val loss stalls for 3 epochs; helps squeeze out the last improvement |
 
