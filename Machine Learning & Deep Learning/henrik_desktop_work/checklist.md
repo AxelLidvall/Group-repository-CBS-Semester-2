@@ -68,19 +68,19 @@
 ### 4.5 Modelling Framework
 
 #### 4.5.1 Custom CNN (from scratch)
-- [ ] Design CNN architecture (conv layers, pooling, batch norm, dropout, 6-class dense head)
-- [ ] Train on training set, validate on val set
+- [x] Design CNN architecture (conv layers, pooling, batch norm, dropout, 6-class dense head)
+- [x] Train on training set, validate on val set
 - [ ] Visualise architecture diagram
 
 #### 4.5.2 Pre-trained CNN (Transfer Learning)
-- [ ] Select pre-trained backbone (ResNet50 / InceptionV3 / EfficientNet)
-- [ ] Freeze base layers, train new 6-class classification head (1 epoch to stabilise)
-- [ ] Fine-tune all layers with lower learning rate
+- [x] Select pre-trained backbone (ResNet50 / InceptionV3 / EfficientNet)
+- [x] Freeze base layers, train new 6-class classification head (1 epoch to stabilise)
+- [x] Fine-tune all layers with lower learning rate
 
 #### 4.5.3 SVM (Baseline)
-- [ ] Extract features (flattened pixels or CNN features)
-- [ ] Apply PCA to reduce dimensionality
-- [ ] Perform grid search with 5-fold cross-validation (multi-class one-vs-rest)
+- [x] Extract features (flattened pixels or CNN features)
+- [x] Apply PCA to reduce dimensionality
+- [x] Perform grid search with 5-fold cross-validation (multi-class one-vs-rest)
 
 ### 4.6 Evaluation Metrics
 - [ ] Define Precision, Recall, F1-score formulas
@@ -92,12 +92,12 @@
 ## 5. Results
 
 ### 5.1 Model Performance
-- [ ] Report per-class and macro-average Precision / Recall / F1 for all models
+- [x] Report per-class and macro-average Precision / Recall / F1 for all models
 - [ ] Present results in a comparison table
-- [ ] Plot training and validation loss curves for neural models
+- [x] Plot training and validation loss curves for neural models
 
 ### 5.2 Complexity & Running Time
-- [ ] Record and report training time for each model
+- [x] Record and report training time for each model
 - [ ] Discuss trade-off between accuracy and speed
 
 ---
@@ -109,12 +109,12 @@
 - [ ] Explain which model performs best and why
 
 ### 6.2 Error Analysis
-- [ ] Show confusion matrix for the best model
+- [x] Show confusion matrix for the best model
 - [ ] Show misclassified images and identify patterns
 
 ### 6.3 CNN Layer Analysis (Grad-CAM)
-- [ ] Apply Grad-CAM to the custom CNN
-- [ ] Visualise what regions the model attends to per class
+- [x] Apply Grad-CAM to the custom CNN
+- [x] Visualise what regions the model attends to per class
 - [ ] Discuss whether the model is looking at relevant features
 
 ---
