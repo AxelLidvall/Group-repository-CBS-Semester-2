@@ -207,3 +207,5 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python
+Natural language processing and text processing/Exam/Qwen_Qwen3-4B-Q4_K_M.gguf
+Natural language processing and text processing/Exam/Glove/Glove.6b/glove.6B.100d.txt
